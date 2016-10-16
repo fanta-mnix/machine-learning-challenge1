@@ -1,6 +1,11 @@
 # Machine Learning JS: Desafio #1
 O intuito é criar um Perceptron em JS que classifique caracteres manuscritos do Dataset MNIST.
 
+## Arquivos
+`features.csv`: Cada linha representa uma imagem em tons de cinza com dimensão de 8x8 pixels, totalizando 64 características.
+
+`labels.csv`: Contém as classes das imagens contidas no `features.csv`, de 0 a 9, correspondendo ao digito representado.
+
 ## Instruções
 Execute `npm install` para instalar as dependências.
 
