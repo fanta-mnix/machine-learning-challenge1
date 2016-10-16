@@ -18,3 +18,6 @@ A sua função de calcular gradiente não está retornando um gradiente numéric
 
 ### Meu Delta não decresce
 É comum o Delta crescer em algumas iterações, mas se ele está subindo a quase toda iteração, o seu cálculo do gradiente deve estar errado.
+
+### Não consigo de jeito nenhum :(
+Tudo bem, você pode conferir a versão resolvida no arquivo `answer.js`
