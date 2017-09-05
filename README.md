@@ -1,28 +1,28 @@
-# Machine Learning JS: Desafio #1
-O intuito é criar um Perceptron em JS que classifique caracteres manuscritos do Dataset MNIST.
+# Machine Learning JS: Challenge #1
+The goal is to implement a Perceptron in JS that classifies [MNIST handwritten digits](http://yann.lecun.com/exdb/mnist).
 
-## Arquivos
-`features.csv`: Cada linha representa uma imagem em tons de cinza com dimensão de 8x8 pixels, totalizando 64 características.
+## Files
+`features.csv`: Each row is a grayscale image the digit with 8x8 pixels.
 
-`labels.csv`: Contém as classes das imagens contidas no `features.csv`, de 0 a 9, correspondendo ao digito representado.
+`labels.csv`: Contains the labels for the rows in `features.csv`, from 0 to 9, corresponding to the digit.
 
-## Instruções
-Execute `npm install` para instalar as dependências.
+## Instructions
+Run `npm install` to install dependencies.
 
-Abra o arquivo `exercise.js` e preencha os trechos indicados por comentários, começando pelo **PASSO 1**.
+Open the file `exercise.js` and fill the code snippets indicated by comments, starting from **STEP 1**.
 
-Após preencher, execute usando `node exercise.js` e veja o resultado no console.
+After that, you can test the code by running `node exercise.js` and observing the output in the console.
 
-**Dica:** Observe o Delta no console. Ele deverá diminuir a cada iteração, indicando que o aprendizado está convergindo.
+**Pro Tip:** Pay attention to the Delta parameter in the console messages. It should decrease with each iteration, indicating that the learning is converging.
 
-Se você fizer corretamente, o programa irá imprimir algo parecido com `Score on test data: 99.27%`.
+If you get this right, you should see something like that printed to the console: `Score on test data: 99.27%`.
 
 ## Troubleshooting
-### Meu score é 0% / Meu delta é NaN
-A sua função de calcular gradiente não está retornando um gradiente numérico válido.
+### My score is 0% / My delta is NaN
+The gradient calculation isn't returning a valid number.
 
-### Meu Delta não decresce
-É comum o Delta crescer em algumas iterações, mas se ele está subindo a quase toda iteração, o seu cálculo do gradiente deve estar errado.
+### My Delta isn't decreasing
+It is possible that the Delta will increase in some iterations, by it should not happen on most of them. If you notice that Delta is increasing most of the time, your gradient calculation might be wrong.
 
-### Não consigo de jeito nenhum :(
-Tudo bem, você pode conferir a versão resolvida no arquivo `answer.js`
+### I can't do this, no matter what :(
+It's alright buddy. You can peek the solution in the `answer.js` file.

@@ -53,19 +53,26 @@ function binarize(labels, targetLabel) {
     return labels.map(label => label === targetLabel ? 1 : 0);
 }
 
+
+/**
+ * 
+ * @param {*} X - Array of arrays where each row corresponds to a digit
+ * @param {*} y - Array of strings where each row corresponds to the true label for the digit of same index in X
+ * @param {*} n - The numbers of elements (features) for each each digit in X
+ * @param {*} predict - The prediction function implemented in STEP 1
+ */
 function calculateGradient(X, y, n, predict) {
     const m = X.length;
     const gradient = new Array(n).fill(0);
 
-    // TODO: [PASSO 2] Implementar cálculo de gradiente
-    // No Perceptron, o gradiente é calculado da seguinte forma:
-    // Para cada amostra de treino, calcule a "prediction":
-    //     Se a prediction for igual ao valor esperado, NÃO altere o gradiente
-    //     Se a prediction for positiva (1), mas o valor esperado for negativo (0), subtraia a amostra do gradiente
-    //     Se a prediction for negativa (0), mas o valor esperado for positivo (1), some a amostra ao gradiente
-    // Após fazer isso para todas as amostras de treino, retorne o array 'gradient'
-    // Dica: Pra Utilize as funções add, inPlaceAdd, sub, inPlaceSub e scale para fazer operações com arrays
-
+    // [STEP 2] TODO: Implement gradient calculation
+    // Instructions: For each row in X (called training sample), use 'predict' to obtain the prediction
+    // - If the result is equal to y, the prediction is right and nothing needs to be done for this sample
+    // - If the result is '1' but the true label is '0' (y element with corresponding index in X), subtract the
+    // training sample from the gradient
+    // - If the result is '0' but the true label is '1', add the training sample to the gradient
+    // After doing this for all rows (training samples) in  X, return 'gradient'
+    // Tip: You can use functions provded above to make things easier: 'add', 'inPlaceAdd', 'sub', 'inPlaceSub' and 'scale'
     return gradient;
 }
 
@@ -78,14 +85,15 @@ function train(keys, X, y, calculateGradient, learningRate, maxIterations) {
     const Xt = X.map(x => insertBias(x));
     const weights = new Array(n + 1).fill(0);
 
+    /**
+     * Given the input array 'x' containing color data about a digit and the neurons array 'weights',
+     * the function returns 1 when the summation of the products between elements 'x' and 'weights' is greater
+     * than or equal to zero, otherwise, returns 0.
+     * 'x' and 'weights' have the same length.
+     * E.g.: Give x = [1 3 8] and weights = [0.25 -1 1], predict should return 1
+     */
     var predict = function predict(x) {
-        // TODO: [PASSO 1] Implementar a função que, dado um array de características 'x'
-        // e os pesos dos neurônios 'weights', retorne 1 caso 'x' pertença a classe desejada ou 0 caso contrário
-        // Para isso, o perceptron faz o somatório dos produtos entre os neurônios e os inputs:
-        //     Se a soma for maior que 0, então o perceptron retorna 1 (indicando que x pertence a classe 1)
-        //     Caso contrário retorna zero
-        // O array x e o array weights possuem o mesmo tamanho.
-        // Ex: Dado o input x = [1 3 8] e weights = [0.25 -1 1], predict deveria retornar '1'
+        // [STEP 1] TODO: Implement the body of predict function
     };
 
     for (var iteration = 0; iteration < maxIterations; iteration++) {

@@ -1,8 +1,9 @@
-// CUIDADO: Você está prestes a olhar a resposta!
-// CUIDADO: Você está prestes a olhar a resposta!
-// CUIDADO: Você está prestes a olhar a resposta!
-// CUIDADO: Você está prestes a olhar a resposta!
-// CUIDADO: Você está prestes a olhar a resposta!
+// WATCH OUT: You are about to see the answer!
+// WATCH OUT: You are about to see the answer!
+// WATCH OUT: You are about to see the answer!
+// WATCH OUT: You are about to see the answer!
+// WATCH OUT: You are about to see the answer!
+// WATCH OUT: You are about to see the answer!
 
 var fs = require("fs");
 var d3 = require("d3");
